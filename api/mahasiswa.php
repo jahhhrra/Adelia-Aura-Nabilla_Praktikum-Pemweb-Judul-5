@@ -186,7 +186,7 @@ function handlePut(PDO $pdo, ?int $id): void {
  * 4. Menangani HTTP DELETE (Hapus Data Mahasiswa)
  */
 function handleDelete(PDO $pdo, ?int $id): void {
-    if ($id) { 
+    if (!$id) { 
     http_response_code(400);
     echo json_encode(['status' => 'error', 'message' => 'ID mahasiswa wajib disertakan.']);
     return;

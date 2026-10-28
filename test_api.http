@@ -56,3 +56,28 @@ Accept: application/json
 DELETE http://localhost:8000/api/mahasiswa.php?id=4
 Accept: application/json
 
+### POST - Menambahkan Data Mahasiswa
+POST http://localhost:8000/api/mahasiswa.php
+Content-Type: application/json
+
+{
+    "npm": "2415061044",
+    "nama": "Zahra Dini Amarta",
+    "program_studi": "Teknik Informatika",
+    "angkatan": 2024,
+    "email": "zahradini646@gmail.com"
+}
+
+### PUT - Memperbarui Data Mahasiswa
+PUT http://localhost:8000/api/mahasiswa.php?id=6
+Content-Type: application/json
+
+{
+    "nama": "Zahra Dini Amarta",
+    "program_studi": "Teknik Informatika",
+    "angkatan": 2024,
+    "email": "zahradini123@gmail.com"
+}
+
+### DELETE - Menghapus Data Mahasiswa
+DELETE http://localhost:8000/api/mahasiswa.php?id=6
